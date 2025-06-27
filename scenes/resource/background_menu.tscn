@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0oon41h5ov2v"]
+
+[ext_resource type="Texture2D" uid="uid://brrihvce27qtb" path="res://assets/sprites/UI/bg/sprite_bg01.png" id="1_lxp2p"]
+
+[node name="background_menu" type="ParallaxBackground"]
+
+[node name="parallax_layer" type="ParallaxLayer" parent="."]
+
+[node name="texture" type="TextureRect" parent="parallax_layer"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_lxp2p")

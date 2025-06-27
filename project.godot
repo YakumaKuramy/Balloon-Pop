@@ -11,20 +11,25 @@ config_version=5
 [application]
 
 config/name="Balloon Pop"
-run/main_scene="res://intro_game.tscn"
+run/main_scene="res://scenes/systems/intro_game.tscn"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+TransitionScreen="*res://scenes/resource/transition_screen.tscn"
 
 [display]
 
 window/size/viewport_width=720
 window/size/viewport_height=1280
-window/size/window_width_override=240
-window/size/window_height_override=533
+window/size/window_width_override=360
+window/size/window_height_override=640
 window/stretch/mode="canvas_items"
 window/handheld/orientation=1
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"

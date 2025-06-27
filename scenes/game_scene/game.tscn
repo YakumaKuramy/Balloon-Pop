@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdm65l3x0kxf4"]
+
+[ext_resource type="PackedScene" uid="uid://dfwxijhx1v6cf" path="res://scenes/systems/hud.tscn" id="1_jpbhf"]
+[ext_resource type="PackedScene" uid="uid://cepthh3k5vnir" path="res://scenes/resource/background.tscn" id="2_cw6cr"]
+
+[node name="game" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HUD" parent="." instance=ExtResource("1_jpbhf")]
+
+[node name="background" parent="." instance=ExtResource("2_cw6cr")]
