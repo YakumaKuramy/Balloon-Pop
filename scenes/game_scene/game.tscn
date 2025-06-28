@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cdm65l3x0kxf4"]
 
-[ext_resource type="PackedScene" uid="uid://dfwxijhx1v6cf" path="res://scenes/systems/hud.tscn" id="1_jpbhf"]
+[ext_resource type="Script" uid="uid://dtbpn3mnxxi6r" path="res://scripts/systems/game.gd" id="1_700et"]
 [ext_resource type="PackedScene" uid="uid://cepthh3k5vnir" path="res://scenes/resource/background.tscn" id="2_cw6cr"]
 
 [node name="game" type="Control"]
@@ -10,7 +10,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="HUD" parent="." instance=ExtResource("1_jpbhf")]
+script = ExtResource("1_700et")
 
 [node name="background" parent="." instance=ExtResource("2_cw6cr")]
+
+[node name="spawn_timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="spawn_timer" to="." method="_on_spawn_timer_timeout"]

@@ -56,6 +56,7 @@ texture_over = ExtResource("2_w4bxj")
 texture_progress = ExtResource("3_glxwr")
 
 [node name="lbl_score" type="Label" parent="geral"]
+layout_mode = 0
 offset_left = 586.0
 offset_top = 40.0
 offset_right = 638.0
@@ -130,3 +131,6 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_sxgdg")
 icon = ExtResource("7_gjv2t")
 flat = true
 icon_alignment = 1
+
+[connection signal="pressed" from="geral/game_over/restart_button" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="geral/game_over/exit_button" to="." method="_on_exit_button_pressed"]
